@@ -32,15 +32,13 @@ RUN git clone https://github.com/digiampietro/lzma-uncramfs && \
     cd ..
 
 # Download, unzip, and build uncramfs, then remove the zip file
-RUN wget -O uncramfs.zip https://gitlab.com/kalilinux/packages/firmware-mod-kit/-/archive/kali/master/firmware-mod-kit-kali-master.zip?path=src/uncramfs && \
+RUN wget https://raw.githubusercontent.com/Engineer-26/cramfs-utils/main/uncramfs.zip && \
     unzip uncramfs.zip && \
-    mv firmware-mod-kit-kali-master-src-uncramfs/src/uncramfs/ . && \
-    rm -rf firmware-mod-kit-kali-master-src-uncramfs/ && \
-    rm uncramfs.zip && \
     cd uncramfs && \
     make && \
     cp uncramfs /usr/local/bin/ && \
-    cd ..
+    cd .. && \
+    rm uncramfs.zip
 
 # Set the default command to bash
 CMD ["bash"]

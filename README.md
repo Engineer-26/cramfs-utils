@@ -7,6 +7,7 @@ Dockerized cramfs utilities
   * `cramfsswap`
   * `lzma-uncramfs`
   * `uncramfs`
+
 ## Installation
 1. Install and setup docker
 2. `git clone https://github.com/Engineer-26/cramfs-utils`
@@ -35,3 +36,9 @@ uncramfs() {
     docker run --rm -v $(pwd):/home/ubuntu cramfs-utils uncramfs "$@"
 }
 ```
+
+## Credits
+* https://github.com/npitre/cramfs-tools
+* https://github.com/julijane/cramfsswap
+* https://github.com/digiampietro/lzma-uncramfs
+* https://gitlab.com/kalilinux/packages/firmware-mod-kit/-/archive/kali/master/firmware-mod-kit-kali-master.zip?path=src/uncramfs

@@ -1,5 +1,5 @@
 # cramfs-utils
-Dockerized cramfs utilities
+Dockerized cramfs utilities & extractors
 
 # Why?
 `cramfs`'s deprication in Ubuntu 18.04 made working with related tools very difficult. [Binwalk](link.needed) relies on those depricated tools and [unblob](link.needed)'s cramfs extractor is not quite up to par for some edge cases.
